@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Youtube to MP3 Converter",
+  "version": "1.0",
+  "description": "Convert YouTube videos to MP3",
+  "permissions": ["activeTab"],
+  "host_permissions": [
+    "https://youtube-mp36.p.rapidapi.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/times-new-roman" rel="stylesheet" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+      }
+      .gradient-background {
+        background: linear-gradient(135deg, #ff0000, #ff6b6b);
+        padding: 2rem 0;
+        border-radius: 25% 25% 25% 25% / 0% 0% 25% 25%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 0 15px;
+        margin-bottom: 20px;
+      }
+      .text-center {
+        text-align: center;
+      }
+      h1, h4 {
+        color: white;
+        margin-bottom: 1rem;
+      }
+      .input-group {
+        display: flex;
+        margin-bottom: 1rem;
+      }
+      .form-control {
+        flex-grow: 1;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem 0 0 0.25rem;
+      }
+      .form-control:focus {
+        outline: none;
+        border-color: #ff8080;
+        box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+      }
+      #convert-btn {
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0 0.25rem 0.25rem 0;
+        cursor: pointer;
+      }
+      #convert-btn:hover {
+        background-color: #cc0000;
+      }
+      .card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+        margin-top: 2rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .success {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .success b a {
+        margin-top: 10px;
+      }
+      .success b a button {
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .success b a button:hover {
+        background-color: #cc0000;
+      }
+    </style>
+    <title>MP3 Converter</title>
+  </head>
+  <body>
+    <div class="gradient-background">
+      <div class="container">
+        <form id="convert-form" class="text-center">
+          <h1><i class="fa-brands fa-youtube"></i> Youtube to MP3</h1>
+          <h4>Enter Video URL</h4>
+          <div class="input-group">
+            <input type="text" id="videoURL" class="form-control" placeholder="Video URL goes here" aria-label="Video URL">
+            <button type="button" id="convert-btn">Convert</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="result" class="card">
+        <!-- Result will be displayed here -->
+      </div>
+    </div>
+    
+    <script src="popup.js"></script>
+  </body>
+</html>
